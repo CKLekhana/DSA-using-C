@@ -4,11 +4,9 @@
 
 int main(){
 
-
-    int size = 5, type = 3;
-
+    int size = 5;
     // verifying insertion function
-    int *intVector = (int *)vector1d(size, type);
+    int *intVector = (int *)vector1d(size, sizeof(int));
 
     if(!intVector){
         printf("No memory/ Allocation failed.");
@@ -45,7 +43,7 @@ int main(){
 
     /*
     // snippet for testing char vectors
-    char *charVector = (char *)vector1d(size, type);
+    char *charVector = (char *)vector1d(size, sizeof(char));
 
     if(!charVector){
         printf("No memory/ Allocation failed.");
@@ -72,7 +70,7 @@ int main(){
     /*
     
     // snippet for testing double vectors
-    double *doubleVector = (double *)vector1d(size, type);
+    double *doubleVector = (double *)vector1d(size, sizeof(double));
 
     if(!doubleVector){
         printf("No memory/ Allocation failed.");
@@ -102,7 +100,7 @@ int main(){
     /*
     
     // snippet for testing float vectors
-    float *floatVector = (float *)vector1d(size, type);
+    float *floatVector = (float *)vector1d(size, sizeof(float));
 
     if(!floatVector){
         printf("No memory/ Allocation failed.");
@@ -133,7 +131,7 @@ int main(){
 
     /*
     // the following snippet checks for vector assignment for integer values
-    int *intVector = (int *)vector1d(size, type);
+    int *intVector = (int *)vector1d(size, sizeof(int));
 
     if(!intVector){
         printf("No memory/ Allocation failed.");
