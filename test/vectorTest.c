@@ -7,6 +7,43 @@ int main(){
 
     int size = 5, type = 3;
 
+    // verifying insertion function
+    int *intVector = (int *)vector1d(size, type);
+
+    if(!intVector){
+        printf("No memory/ Allocation failed.");
+        return 0;
+    }
+
+    int *ptr = intVector;
+    for(int i=1; i<=5;i++){
+        *ptr = i;
+        ptr++;
+    }
+
+    ptr = intVector;
+    for(int i=1; i<=5; i++){
+        printf("%d : %d\n", i, *ptr);
+        ptr++;
+    }
+
+    int pos = 2;
+    int value = 100;
+
+    printf("\n----\n");
+    printf("After insertion\n");
+    intVector = vector1dInsertion(intVector, size, sizeof(int), pos, &value);
+    ptr = intVector;
+    for(int i=1; i<=5; i++){
+        printf("%d : %d\n", i, *ptr);
+        ptr++;
+    }
+
+    free(intVector);
+
+
+
+    /*
     // snippet for testing char vectors
     char *charVector = (char *)vector1d(size, type);
 
@@ -30,6 +67,8 @@ int main(){
 
     free(charVector);
 
+    */
+    
     /*
     
     // snippet for testing double vectors
